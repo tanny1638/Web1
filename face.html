@@ -1,0 +1,129 @@
+
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+    <title>User Profile</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <!-- Left column -->
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">User Details</h5>
+                    <!-- Display user information here -->
+                    <p>Name: John Doe</p>
+                    <p>Email: john@example.com</p>
+                    <p>Location: City, Country</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle column -->
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Update Information</h5>
+                    <!-- Form to update user information -->
+                    <form id="updateForm" onsubmit="validateForm(); return false;">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" class="form-control" id="location" placeholder="Enter your location" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Additional Information</h5>
+                    <!-- Display additional user information here -->
+                    <p>Member since: January 2022</p>
+                    <p>Posts: 50</p>
+                    <p>Friends: 100</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login form -->
+    <div class="row mt-5">
+        <div class="col-lg-4 offset-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Login</h5>
+                    <form id="loginForm" onsubmit="validateLoginForm(); return false;">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+    // JavaScript code for updating user information
+    function validateForm() {
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var location = document.getElementById('location').value.trim();
+
+        if (name === '' || email === '' || location === '') {
+            alert('Please fill in all fields');
+        } else {
+            // Add logic to update user information using AJAX or other methods
+            alert('User information updated successfully!');
+        }
+    }
+
+    // JavaScript code for login form validation
+    function validateLoginForm() {
+        var username = document.getElementById('username').value.trim();
+        var password = document.getElementById('password').value.trim();
+
+        if (username === '' || password === '') {
+            alert('Please fill in all fields');
+        } else {
+            // Add logic to handle login using AJAX or other methods
+            alert('Login successful!');
+        }
+    }
+</script>
+</body>
+</html>
